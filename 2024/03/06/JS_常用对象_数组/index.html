@@ -4,8 +4,18 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="JS_常用对象_数组, Hexo">
+    <meta name="description" content="数组
+什么是数组？
+
+字面理解就是 数字的组合
+
+其实不太准确，准确的来说数组是一个 数据的集合
+
+也就是我们把一些数据放在一个盒子里面，按照顺序排好
+1[1, 2, 3, &amp;#x27;hello&amp;#x27;, true, false]
+
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +27,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>JS_常用对象_数组 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -288,12 +298,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">JS_常用对象_数组</h1>
                 </div>
             </div>
         </div>
@@ -315,9 +325,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -329,28 +343,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2024-03-05
+                    2024-03-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2024-03-05
+                    2024-03-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    75
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    7 Min
                 </div>
                 
 
@@ -370,19 +384,168 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
+<li><p>什么是数组？</p>
+</li>
+<li><p>字面理解就是 <strong>数字的组合</strong></p>
+</li>
+<li><p>其实不太准确，准确的来说数组是一个 <strong>数据的集合</strong></p>
+</li>
+<li><p>也就是我们把一些数据放在一个盒子里面，按照顺序排好</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="string">&#x27;hello&#x27;</span>, <span class="literal">true</span>, <span class="literal">false</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这个东西就是一个数组，存储着一些数据的集合</p>
+</li>
+</ul>
+<h3 id="1、数组使用"><a href="#1、数组使用" class="headerlink" title="1、数组使用"></a>1、数组使用</h3><ul>
+<li>数组就是一个 <code>[]</code></li>
+<li>在 <code>[]</code> 里面存储着各种各样的数据，按照顺序依次排好</li>
+</ul>
+<h4 id="1-1字面量创建一个数组"><a href="#1-1字面量创建一个数组" class="headerlink" title="1.1字面量创建一个数组"></a>1.1字面量创建一个数组</h4><ul>
+<li><p>直接使用 <code>[]</code> 的方式创建一个数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个空数组</span></span><br><span class="line"><span class="keyword">var</span> arr1 = []</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个有内容的数组</span></span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="1-2-内置构造函数创建数组"><a href="#1-2-内置构造函数创建数组" class="headerlink" title="1.2 内置构造函数创建数组"></a>1.2 内置构造函数创建数组</h4><ul>
+<li><p>使用 js 的内置构造函数 <code>Array</code> 创建一个数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个空数组</span></span><br><span class="line"><span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="title class_">Array</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个长度为 10 的数组</span></span><br><span class="line"><span class="keyword">var</span> arr2 = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个有内容的数组</span></span><br><span class="line"><span class="keyword">var</span> arr3 = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="1-3-数组的-length"><a href="#1-3-数组的-length" class="headerlink" title="1.3 数组的 length"></a>1.3 数组的 length</h4><ul>
+<li><p>length:  长度的意思</p>
+</li>
+<li><p>length 就是表示数组的长度，数组里面有多少个成员，length 就是多少</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个数组</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="property">length</span>) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="1-4-数组的索引"><a href="#1-4-数组的索引" class="headerlink" title="1.4 数组的索引"></a>1.4 数组的索引</h4><ul>
+<li><p>索引，也叫做下标，是指一个数据在数组里面排在第几个的位置</p>
+</li>
+<li><p>注意： <strong>在所有的语言里面，索引都是从 0 开始的</strong></p>
+</li>
+<li><p>在 js 里面也一样，数组的索引从 0 开始</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个数组</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">&#x27;hello&#x27;</span>, <span class="string">&#x27;world&#x27;</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上面这个数组中，<strong>第 0 个</strong> 数据就是字符串 <code>hello</code>，<strong>第 1 个</strong> 数据就是字符串 <code>world</code></p>
+</li>
+<li><p>想获取数组中的第几个就使用 <code>数组[索引]</code> 来获取</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">&#x27;hello&#x27;</span>, <span class="string">&#x27;world&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">0</span>]) <span class="comment">// hello</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">1</span>]) <span class="comment">// world</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="2、数组的常用方法"><a href="#2、数组的常用方法" class="headerlink" title="2、数组的常用方法"></a>2、数组的常用方法</h3><ul>
+<li><p>数组是一个复杂数据类型，我们在操作它的时候就不能再想基本数据类型一样操作了</p>
+</li>
+<li><p>比如我们想改变一个数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个数组</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 我们想把数组变成只有 1 和 2</span></span><br><span class="line">arr = [<span class="number">1</span>, <span class="number">2</span>]</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<ul>
+<li>这样肯定是不合理，因为这样不是在改变之前的数组</li>
+<li>相当于心弄了一个数组给到 arr 这个变量了</li>
+<li>相当于把 arr 里面存储的地址给换了，也就是把存储空间换掉了，而不是在之前的空间里面修改</li>
+<li>所以我们就需要借助一些方法，在不改变存储空间的情况下，把存储空间里面的数据改变了</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-1-数组常用方法之-push"><a href="#2-1-数组常用方法之-push" class="headerlink" title="2.1 数组常用方法之 push"></a>2.1 数组常用方法之 push</h4><ul>
+<li><p><code>push</code> 是用来在数组的末尾追加一个元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 push 方法追加一个元素在末尾</span></span><br><span class="line">arr.<span class="title function_">push</span>(<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr) <span class="comment">// [1, 2, 3, 4]</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="2-2-数组常用方法之-pop"><a href="#2-2-数组常用方法之-pop" class="headerlink" title="2.2 数组常用方法之 pop"></a>2.2 数组常用方法之 pop</h4><ul>
+<li><p><code>pop</code> 是用来删除数组末尾的一个元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 pop 方法删除末尾的一个元素</span></span><br><span class="line">arr.<span class="title function_">pop</span>()</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr) <span class="comment">// [1, 2]</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="2-3-数组常用方法之-unshift"><a href="#2-3-数组常用方法之-unshift" class="headerlink" title="2.3 数组常用方法之 unshift"></a>2.3 数组常用方法之 unshift</h4><ul>
+<li><p><code>unshift</code> 是在数组的最前面添加一个元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 unshift 方法想数组的最前面添加一个元素</span></span><br><span class="line">arr.<span class="title function_">unshift</span>(<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr) <span class="comment">// [4, 1, 2, 3]</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="2-4-数组常用方法之-shift"><a href="#2-4-数组常用方法之-shift" class="headerlink" title="2.4 数组常用方法之  shift"></a>2.4 数组常用方法之  shift</h4><ul>
+<li><p><code>shift</code> 是删除数组最前面的一个元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 shift 方法删除数组最前面的一个元素</span></span><br><span class="line">arr.<span class="title function_">shift</span>()</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr) <span class="comment">// [2, 3]</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="2-5-数组常用方法之-splice"><a href="#2-5-数组常用方法之-splice" class="headerlink" title="2.5 数组常用方法之 splice"></a>2.5 数组常用方法之 splice</h4><ul>
+<li><p><code>splice</code> 是截取数组中的某些内容，按照数组的索引来截取</p>
+</li>
+<li><p>语法： <code>splice(从哪一个索引位置开始，截取多少个，替换的新元素)</code> （第三个参数可以不写）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 splice 方法截取数组</span></span><br><span class="line">arr.<span class="title function_">splice</span>(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr) <span class="comment">// [1, 4, 5]</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>arr.splice(1, 2)</code> 表示从索引 1 开始截取 2 个内容</li>
+<li>第三个参数没有写，就是没有新内容替换掉截取位置</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 splice 方法截取数组</span></span><br><span class="line">arr.<span class="title function_">splice</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;我是新内容&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr) <span class="comment">// [1, &#x27;我是新内容&#x27;, 4, 5]</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>arr.splice(1, 2, &#39;我是新内容&#39;)</code> 表示从索引 1 开始截取 2 个内容</li>
+<li>然后用第三个参数把截取完空出来的位置填充</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-6-数组常用方法之-reverse"><a href="#2-6-数组常用方法之-reverse" class="headerlink" title="2.6 数组常用方法之 reverse"></a>2.6 数组常用方法之 reverse</h4><ul>
+<li><p><code>reverse</code> 是用来反转数组使用的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 reverse 方法来反转数组</span></span><br><span class="line">arr.<span class="title function_">reverse</span>()</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr) <span class="comment">// [3, 2, 1]</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="2-7-数组常用方法之-sort"><a href="#2-7-数组常用方法之-sort" class="headerlink" title="2.7 数组常用方法之 sort"></a>2.7 数组常用方法之 sort</h4><ul>
+<li><p><code>sort</code> 是用来给数组排序的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 sort 方法给数组排序</span></span><br><span class="line">arr.<span class="title function_">sort</span>()</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr) <span class="comment">// [1, 2, 3]</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<ul>
+<li>这个只是一个基本的简单用法</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-8-数组常用方法之-concat"><a href="#2-8-数组常用方法之-concat" class="headerlink" title="2.8 数组常用方法之 concat"></a>2.8 数组常用方法之 concat</h4><ul>
+<li><p><code>concat</code> 是把多个数组进行拼接</p>
+</li>
+<li><p>和之前的方法有一些不一样的地方，就是 <code>concat</code> 不会改变原始数组，而是返回一个新的数组</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 concat 方法拼接数组</span></span><br><span class="line"><span class="keyword">var</span> newArr = arr.<span class="title function_">concat</span>([<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr) <span class="comment">// [1, 2, 3]</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArr) <span class="comment">// [1, 2, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>注意： <strong>concat 方法不会改变原始数组</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="2-9-数组常用方法之-join"><a href="#2-9-数组常用方法之-join" class="headerlink" title="2.9 数组常用方法之 join"></a>2.9 数组常用方法之 join</h4><ul>
+<li><p><code>join</code> 是把数组里面的每一项内容链接起来，变成一个字符串</p>
+</li>
+<li><p>可以自己定义每一项之间链接的内容 <code>join(要以什么内容链接)</code></p>
+</li>
+<li><p>不会改变原始数组，而是把链接好的字符串返回</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 join 链接数组</span></span><br><span class="line"><span class="keyword">var</span> str = arr.<span class="title function_">join</span>(<span class="string">&#x27;-&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr) <span class="comment">// [1, 2, 3]</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str) <span class="comment">// 1-2-3</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>注意： <strong>join 方法不会改变原始数组，而是返回链接好的字符串</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="3、数组的遍历"><a href="#3、数组的遍历" class="headerlink" title="3、数组的遍历"></a>3、数组的遍历</h3><ul>
+<li><p>因为数组的索引就可以获取数组中的内容</p>
+</li>
+<li><p>数组的索引又是按照 0 ～ n 顺序排列</p>
+</li>
+<li><p>我们就可以使用 for 循环来循环数组，因为 for 循环我们也可以设置成 0 ～ n 顺序增加</p>
+</li>
+<li><p>我们把这个行为叫做 <strong>遍历</strong></p>
+</li>
+</ul>
+<h4 id="3-1-for循环遍历"><a href="#3-1-for循环遍历" class="headerlink" title="3.1 for循环遍历"></a>3.1 for循环遍历</h4>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 for 循环遍历数组</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(arr[i])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 会在控制台依次打印出 1， 2， 3， 4， 5</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>i &lt; arr.length</code> 因为 length 就是数组的长度，就是一个数字，所以我们可以直接用它来决定循环次数</li>
+<li><code>console.log(arr[i])</code> 因为随着循环，i 的值会从 0 开始依次增加</li>
+<li>所以我们实际上就相当于在打印 <code>arr[0]</code> &#x2F; <code>arr[1]</code> &#x2F; …</li>
+</ul>
+<h4 id="3-2-for…in循环遍历"><a href="#3-2-for…in循环遍历" class="headerlink" title="3.2 for…in循环遍历"></a>3.2 for…in循环遍历</h4><ul>
+<li><p>因为 <strong>对象</strong> 是没有索引的，所以我们没有办法使用 for 循环来遍历</p>
+</li>
+<li><p>这里我们使用 for in 循环来遍历对象</p>
+</li>
+<li><p>先来看一段代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;Jack&#x27;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(key)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 会在控制台打印两次内容，分别是 name 和 age</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>for in 循环的遍历是按照对象中有多少成员来决定了</li>
+<li>有多少成员，就会执行多少次</li>
+<li><code>key</code> 是我们自己定义的一个变量，就和 for 循环的时候我们定义的 i 一个道理</li>
+<li>在每次循环的过程中，key 就代表着对象中某一个成员的 <strong>属性名</strong></li>
+</ul>
+</li>
+</ul>
 
                 
             </div>
@@ -409,7 +572,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2024/03/05/hello-world/">http://example.com/2024/03/05/hello-world/</a>
+                    <a href="http://example.com/2024/03/06/JS_%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1_%E6%95%B0%E7%BB%84/">http://example.com/2024/03/06/JS_%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1_%E6%95%B0%E7%BB%84/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -446,7 +609,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -490,9 +657,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2024/03/06/JS_%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1_%E6%95%B0%E7%BB%84/">
                     <div class="card-image">
@@ -510,9 +678,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -521,6 +689,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -536,7 +705,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2024/03/05/hello-world/">
@@ -566,7 +735,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
