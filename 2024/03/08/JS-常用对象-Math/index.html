@@ -4,8 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo">
-    <meta name="description" content="Hexo">
+    <meta name="keywords" content="JS_常用对象_Math, Hexo">
+    <meta name="description" content="Math
+Math 是 js 的一个内置对象，提供了一堆的方法帮助我们操作 数字
+
+1、Math的常用方法1.1 random
+Math.random() 这个方法是用来生成一个 0 ~ 1 之间的随机数
+
+每次执行生成的数字都不一样，但是">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +23,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo</title>
+    <title>JS_常用对象_Math | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -288,12 +294,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">JS_常用对象_Math</h1>
                 </div>
             </div>
         </div>
@@ -315,9 +321,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -329,21 +339,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2024-03-05
+                    2024-03-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2024-03-05
+                    2024-03-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    11
+                    374
                 </div>
                 
 
@@ -370,8 +380,51 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<p>title: categories<br>date: 2024-03-05 17:25:30<br>type: “categories”<br>layout: “categories”<br>​—</p>
+                <h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ul>
+<li>Math 是 js 的一个内置对象，提供了一堆的方法帮助我们操作 <strong>数字</strong></li>
+</ul>
+<h3 id="1、Math的常用方法"><a href="#1、Math的常用方法" class="headerlink" title="1、Math的常用方法"></a>1、Math的常用方法</h3><h4 id="1-1-random"><a href="#1-1-random" class="headerlink" title="1.1 random"></a>1.1 random</h4><ul>
+<li><p><code>Math.random()</code> 这个方法是用来生成一个 <code>0 ~ 1</code> 之间的随机数</p>
+</li>
+<li><p>每次执行生成的数字都不一样，但是一定是 <code>0 ~ 1</code> 之间的</p>
+</li>
+<li><p>生成的数字包含 0 ，但是不包含 1</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="title class_">Math</span>.<span class="title function_">random</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num) <span class="comment">// 得到一个随机数</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="1-2-round"><a href="#1-2-round" class="headerlink" title="1.2 round"></a>1.2 round</h4><ul>
+<li><p><code>Math.round()</code> 是将一个小数 <strong>四舍五入</strong> 变成一个整数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10.1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">round</span>(num)) <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">10.6</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">round</span>(num2)) <span class="comment">// 11</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="1-3-abs"><a href="#1-3-abs" class="headerlink" title="1.3 abs"></a>1.3 abs</h4><ul>
+<li><p><code>Math.abs()</code> 是返回一个数字的绝对值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = -<span class="number">10</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(math.<span class="title function_">abs</span>(num)) <span class="comment">// 10</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="1-4-ceil"><a href="#1-4-ceil" class="headerlink" title="1.4 ceil"></a>1.4 ceil</h4><ul>
+<li><p><code>Math.ceil()</code> 是将一个小数 <strong>向上取整</strong> 得到的整数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10.1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">ceil</span>(num)) <span class="comment">// 11</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">10.9</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">ceil</span>(num2)) <span class="comment">// 11</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="1-5-floor"><a href="#1-5-floor" class="headerlink" title="1.5 floor"></a>1.5 floor</h4><ul>
+<li><p><code>Math.floor()</code> 是将一个小数 <strong>向下取整</strong> 的到的整数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10.1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">floor</span>(num)) <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">10.9</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">floor</span>(num2)) <span class="comment">// 10</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="1-6-max"><a href="#1-6-max" class="headerlink" title="1.6 max"></a>1.6 max</h4><ul>
+<li><p><code>Math.max()</code> 得到的是你传入的几个数字之中最大的那个数字</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">max</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)) <span class="comment">// 5</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="1-7-min"><a href="#1-7-min" class="headerlink" title="1.7 min"></a>1.7 min</h4><ul>
+<li><p><code>Math.min()</code> 得到的是你传入的几个数字之中最小的那个数字</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">min</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="1-8-PI"><a href="#1-8-PI" class="headerlink" title="1.8 PI"></a>1.8 PI</h4><ul>
+<li><p><code>Math.PI</code> 得到的是 <code>π</code> 的值，也就是 <code>3.1415936...</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="property">PI</span>) <span class="comment">// 3.141592653589793</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>因为计算机的计算精度问题，只能得到小数点后 15 位</li>
+<li>使用 Math.PI 的时候，是不需要加 () 的</li>
+</ul>
+</li>
+</ul>
 
                 
             </div>
@@ -398,7 +451,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/categories/index.html">http://example.com/categories/index.html</a>
+                    <a href="http://example.com/2024/03/08/JS-%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1-Math/">http://example.com/2024/03/08/JS-%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1-Math/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -435,7 +488,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -484,13 +541,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2024/03/08/JS-%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1-Math/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="JS_常用对象_Math">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">JS_常用对象_Math</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -501,7 +558,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-08
                             </span>
                         <span class="publish-author">
                             
@@ -513,22 +570,30 @@
                 </div>
 
                 
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
+                
             </div>
         </div>
         
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2024/03/08/JS-%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1-Date/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="JS_常用对象_Date">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">JS_常用对象_Date</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -539,7 +604,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-08
                             </span>
                         <span class="publish-author">
                             
@@ -549,7 +614,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

@@ -4,8 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo">
-    <meta name="description" content="Hexo">
+    <meta name="keywords" content="JS_常用对象_string, Hexo">
+    <meta name="description" content="String1、创建字符串（了解）
+我们创建字符串也分为两种方法 字面量 和 构造函数
+
+字面量： 
+1var str = &amp;#x27;hello&amp;#x27;
+
+构造函数创建
+1var str = new String(&amp;#x27;hell">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +24,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo</title>
+    <title>JS_常用对象_string | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -288,12 +295,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">JS_常用对象_string</h1>
                 </div>
             </div>
         </div>
@@ -315,9 +322,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -329,28 +340,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2024-03-05
+                    2024-03-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2024-03-05
+                    2024-03-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    11
+                    771
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    3 Min
                 </div>
                 
 
@@ -370,8 +381,93 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<p>title: categories<br>date: 2024-03-05 17:25:30<br>type: “categories”<br>layout: “categories”<br>​—</p>
+                <h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><h3 id="1、创建字符串（了解）"><a href="#1、创建字符串（了解）" class="headerlink" title="1、创建字符串（了解）"></a>1、创建字符串（了解）</h3><ul>
+<li><p>我们创建字符串也分为两种方法 <strong>字面量</strong> 和 <strong>构造函数</strong></p>
+</li>
+<li><p>字面量： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;hello&#x27;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>构造函数创建</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="2、字符串的常用方法"><a href="#2、字符串的常用方法" class="headerlink" title="2、字符串的常用方法"></a>2、字符串的常用方法</h3><ul>
+<li>我们操作字符串，也有一堆的方法来帮助我们操作</li>
+<li>字符串和数组有一个一样的地方，也是按照索引来排列的</li>
+</ul>
+<h4 id="2-1-charAt"><a href="#2-1-charAt" class="headerlink" title="2.1 charAt"></a>2.1 charAt</h4><ul>
+<li><p><code>charAt(索引)</code>  是找到字符串中指定索引位置的内容返回</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;Jack&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 charAt 找到字符串中的某一个内容</span></span><br><span class="line"><span class="keyword">var</span> index = str.<span class="title function_">charAt</span>(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(index) <span class="comment">// c</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>因为字符串也是按照索引进行排列的，也是同样从 0 开始</li>
+<li>所以索引 2 的位置就是 c</li>
+</ul>
+</li>
+<li><p>如果没有对应的索引，那么就会返回 空字符串</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;Jack&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 charAt 找到字符串中的某一个内容</span></span><br><span class="line"><span class="keyword">var</span> index = str.<span class="title function_">charAt</span>(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(index) <span class="comment">// &#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这个字符串根本没有索引 10 的位置</li>
+<li>所以就会返回一个空字符串 <code>&#39;&#39;</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="2-2-indexOf"><a href="#2-2-indexOf" class="headerlink" title="2.2 indexOf"></a>2.2 indexOf</h4><ul>
+<li><p><code>indexOf</code> 返回值在字符串中第一次出现的位置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;Jack&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 indexOf 找到对应的索引</span></span><br><span class="line"><span class="keyword">var</span> index = str.<span class="title function_">indexOf</span>(<span class="string">&#x27;J&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(index) <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>因为字符 <code>J</code> 在字符串 <code>Jack</code> 中的索引位置是 0</li>
+<li>所以会返回 0</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-3-lastIndexOf"><a href="#2-3-lastIndexOf" class="headerlink" title="2.3 lastIndexOf"></a>2.3 lastIndexOf</h4><ul>
+<li><p><code>indexOf</code> 返回值在字符串中最后一次出现的位置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;JackJoin&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 indexOf 找到对应的索引</span></span><br><span class="line"><span class="keyword">var</span> index = str.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;J&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(index) <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>因为最后一个字符 <code>J</code> 在字符串 <code>Jack</code> 中的索引位置是4</li>
+<li>所以会返回 4</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-4-substring"><a href="#2-4-substring" class="headerlink" title="2.4 substring"></a>2.4 substring</h4><ul>
+<li><p><code>substring</code> 是用来截取字符串使用的</p>
+</li>
+<li><p>语法： <code>substring(从哪个索引开始，到哪个索引截止)</code>，包含开始索引，不包含结束索引</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line"><span class="comment">//         01234</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 substring 截取字符串</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">substring</span>(<span class="number">1</span>, <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newStr) <span class="comment">// el</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>从索引 1 开始，到索引 3 截止，包含前面的索引不包含后面的索引</li>
+<li>所以返回的是 el</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-5-substr"><a href="#2-5-substr" class="headerlink" title="2. 5 substr"></a>2. 5 substr</h4><ul>
+<li><p><code>substr</code> 也是用来截取字符串的</p>
+</li>
+<li><p>语法：<code>substr(从哪个索引开始，截取多少个)</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line"><span class="comment">//         01234</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 substr 截取字符串</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">substr</span>(<span class="number">1</span>, <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newStr) <span class="comment">// ell</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这个方法和 <code>substring</code> 不一样的是，第二个参数是截取多少个</li>
+<li>从索引 1 开始，截取 3 个，所以得到的是 <code>ell</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="2-6-toLowerCase-和-toUpperCase"><a href="#2-6-toLowerCase-和-toUpperCase" class="headerlink" title="2.6 toLowerCase 和 toUpperCase"></a>2.6 toLowerCase 和 toUpperCase</h4><ul>
+<li><p>这两个方法分别使用用来给字符串转成 小写字母 和 大写字母 的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;hello&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 toUpperCase 转换成大写</span></span><br><span class="line"><span class="keyword">var</span> upper = str.<span class="title function_">toUpperCase</span>()</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(upper) <span class="comment">// HELLO</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 toLowerCase 转换成小写</span></span><br><span class="line"><span class="keyword">var</span> lower = upper.<span class="title function_">toLowerCase</span>()</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(lower) <span class="comment">// hello</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="2-7-replace"><a href="#2-7-replace" class="headerlink" title="2.7 replace"></a>2.7 replace</h4><ul>
+<li><p>在字符串中搜索值，并返回替换值的字符串</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;hello,js&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 replace 替换内容</span></span><br><span class="line"><span class="keyword">var</span> newStr = str.<span class="title function_">replace</span>(<span class="string">&quot;js&quot;</span>,<span class="string">&quot;java&quot;</span>) </span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newStr) <span class="comment">// hello,java</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="2-8-split"><a href="#2-8-split" class="headerlink" title="2.8 split"></a>2.8 split</h4><ul>
+<li><p>将字符串拆分为子字符串数组。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;jack,rose,allen&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 replace 替换内容</span></span><br><span class="line"><span class="keyword">var</span> strArr = str.<span class="title function_">replace</span>(<span class="string">&quot;,&quot;</span>) </span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(strArr) <span class="comment">// [jack,rose,allen]</span></span><br></pre></td></tr></table></figure></li>
+</ul>
 
                 
             </div>
@@ -398,7 +494,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/categories/index.html">http://example.com/categories/index.html</a>
+                    <a href="http://example.com/2024/03/08/JS-%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1-string/">http://example.com/2024/03/08/JS-%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1-string/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -435,7 +531,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -479,18 +579,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2024/03/08/JS-%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1-Date/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="JS_常用对象_Date">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">JS_常用对象_Date</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -500,9 +599,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-08
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -511,7 +610,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -519,16 +625,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2024/03/06/JS_%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1_%E6%95%B0%E7%BB%84/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="JS_常用对象_数组">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">JS_常用对象_数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -539,7 +645,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-06
                             </span>
                         <span class="publish-author">
                             
@@ -549,7 +655,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

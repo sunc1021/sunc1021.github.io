@@ -4,8 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo">
-    <meta name="description" content="Hexo">
+    <meta name="keywords" content="JS_常用对象_Date, Hexo">
+    <meta name="description" content="Date
+js 提供的内置构造函数，专门用来获取时间的
+
+1、创建Date对象new Date()
+new Date() 在不传递参数的情况下是默认返回当前时间
+12var time = new Date()console.log(time">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo</title>
+    <title>JS_常用对象_Date | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -288,12 +293,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">JS_常用对象_Date</h1>
                 </div>
             </div>
         </div>
@@ -315,9 +320,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -329,28 +338,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2024-03-05
+                    2024-03-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2024-03-05
+                    2024-03-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    11
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    5 Min
                 </div>
                 
 
@@ -370,8 +379,83 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<p>title: categories<br>date: 2024-03-05 17:25:30<br>type: “categories”<br>layout: “categories”<br>​—</p>
+                <h2 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h2><ul>
+<li>js 提供的内置构造函数，专门用来获取时间的</li>
+</ul>
+<h3 id="1、创建Date对象"><a href="#1、创建Date对象" class="headerlink" title="1、创建Date对象"></a>1、创建Date对象</h3><h4 id="new-Date"><a href="#new-Date" class="headerlink" title="new Date()"></a>new Date()</h4><ul>
+<li><p><code>new Date()</code> 在不传递参数的情况下是默认返回当前时间</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time) <span class="comment">// 当前时间 Fri Mar 01 2019 13:11:23 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>new Date()</code> 在传入参数的时候，可以获取到一个你传递进去的时间</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&#x27;2019-03-03 13:11:11&#x27;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time) <span class="comment">// Sun Mar 03 2019 13:11:11 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>new Date()</code> 传递的参数有多种情况</p>
+<ol>
+<li><p>传递两个数字，第一个表示年，第二个表示月份</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">2019</span>, <span class="number">00</span>) <span class="comment">// 月份从 0 开始计数，0 表示 1月，11 表示 12月</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time) <span class="comment">// Tue Jan 01 2019 00:00:00 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>传递三个数字，前两个不变，第三个表示该月份的第几天，从 1 到 31</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">2019</span>, <span class="number">00</span>, <span class="number">05</span>) </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time) <span class="comment">// Sat Jan 05 2019 00:00:00 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>传递四个数字，前三个不变，第四个表示当天的几点，从 0 到 23</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">2019</span>, <span class="number">00</span>, <span class="number">05</span>, <span class="number">22</span>) </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time) <span class="comment">// Sat Jan 05 2019 22:00:00 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>传递五个数字，前四个不变，第五个表示的是该小时的多少分钟，从 0 到 59</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">2019</span>, <span class="number">00</span>, <span class="number">05</span>, <span class="number">22</span>, <span class="number">33</span>) </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time) <span class="comment">// Sat Jan 05 2019 22:33:00 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>传递六个数字，前五个不变，第六个表示该分钟的多少秒，从 0 到 59</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">2019</span>, <span class="number">00</span>, <span class="number">05</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">55</span>) </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time) <span class="comment">// Sat Jan 05 2019 22:33:55 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>传入字符串的形式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&#x27;2019&#x27;</span>)) </span><br><span class="line"><span class="comment">// Tue Jan 01 2019 08:00:00 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&#x27;2019-02&#x27;</span>)) </span><br><span class="line"><span class="comment">// Fri Feb 01 2019 08:00:00 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&#x27;2019-02-03&#x27;</span>)) </span><br><span class="line"><span class="comment">// Sun Feb 03 2019 08:00:00 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&#x27;2019-02-03 13:&#x27;</span>)) </span><br><span class="line"><span class="comment">// Sun Feb 03 2019 13:00:00 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&#x27;2019-02-03 13:13:&#x27;</span>)) </span><br><span class="line"><span class="comment">// Sun Feb 03 2019 13:13:00 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&#x27;2019-02-03 13:13:13&#x27;</span>)) </span><br><span class="line"><span class="comment">// Sun Feb 03 2019 13:13:13 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<h3 id="2、Date常用方法"><a href="#2、Date常用方法" class="headerlink" title="2、Date常用方法"></a>2、Date常用方法</h3><ul>
+<li>比如我们得到的时间字符串是 <code>Sun Feb 03 2019 13:13:13 GMT+0800 (中国标准时间)</code></li>
+<li>我指向得到这个日期中是那一年，我们就要靠截取字符串的形式得到</li>
+<li>但是现在 js 为我们提供了一系列的方法来得到里面的指定内容</li>
+</ul>
+<h4 id="getFullYear"><a href="#getFullYear" class="headerlink" title="getFullYear"></a>getFullYear</h4><ul>
+<li><p><code>getFullYear()</code> 方式是得到指定字符串中的哪一年</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time.<span class="title function_">getFullYear</span>()) <span class="comment">// 2019</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="getMonth"><a href="#getMonth" class="headerlink" title="getMonth"></a>getMonth</h4><ul>
+<li><p><code>getMonth()</code> 方法是得到指定字符串中的哪一个月份 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time.<span class="title function_">getMonth</span>()) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这里要有一个注意的地方</li>
+<li>月份是从 0 开始数的</li>
+<li>0 表示 1月，1 表示 2月，依此类推</li>
+</ul>
+</li>
+</ul>
+<h4 id="getDate"><a href="#getDate" class="headerlink" title="getDate"></a>getDate</h4><ul>
+<li><p><code>getDate()</code> 方法是得到指定字符串中的哪一天</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time.<span class="title function_">getDate</span>()) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="getHours"><a href="#getHours" class="headerlink" title="getHours"></a>getHours</h4><ul>
+<li><p><code>getHours()</code> 方法是得到指定字符串中的哪小时</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time.<span class="title function_">getHours</span>()) <span class="comment">// 8</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="getMinutes"><a href="#getMinutes" class="headerlink" title="getMinutes"></a>getMinutes</h4><ul>
+<li><p><code>getMinutes()</code> 方法是得到指定字符串中的哪分钟</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time.<span class="title function_">getMinutes</span>()) <span class="comment">// 0</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="getSeconds"><a href="#getSeconds" class="headerlink" title="getSeconds"></a>getSeconds</h4><ul>
+<li><p><code>getSeconds()</code> 方法是得到指定字符串中的哪秒钟</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time.<span class="title function_">getSeconds</span>()) <span class="comment">// 22</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="getDay"><a href="#getDay" class="headerlink" title="getDay"></a>getDay</h4><ul>
+<li><p><code>getDay()</code> 方法是得到指定字符串当前日期是一周中的第几天（周日是 0，周六是 6）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time.<span class="title function_">getDay</span>()) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="getTime"><a href="#getTime" class="headerlink" title="getTime"></a>getTime</h4><ul>
+<li><p><code>getTime()</code> 方法是得到执行时间到 <code>格林威治时间</code> 的毫秒数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">2019</span>, <span class="number">03</span>, <span class="number">08</span>, <span class="number">08</span>, <span class="number">00</span>, <span class="number">22</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(time.<span class="title function_">getTime</span>()) <span class="comment">// 1554681622000</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="3、案例"><a href="#3、案例" class="headerlink" title="3、案例"></a>3、案例</h3><h4 id="格式化时间"><a href="#格式化时间" class="headerlink" title="格式化时间"></a>格式化时间</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//格式化时间</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatime</span>(<span class="params">date</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> year = date.<span class="title function_">getFullYear</span>();</span><br><span class="line">    <span class="keyword">var</span> month = date.<span class="title function_">getMonth</span>() + <span class="number">1</span> &gt;= <span class="number">10</span> ? date.<span class="title function_">getMonth</span>() + <span class="number">1</span> : <span class="string">&quot;0&quot;</span> + (date.<span class="title function_">getMonth</span>() + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">var</span> day = date.<span class="title function_">getDate</span>() &gt;= <span class="number">10</span> ? date.<span class="title function_">getDate</span>() : <span class="string">&quot;0&quot;</span> + date.<span class="title function_">getDate</span>();</span><br><span class="line">    <span class="keyword">var</span> hour = date.<span class="title function_">getHours</span>() &gt;= <span class="number">10</span> ? date.<span class="title function_">getHours</span>() : <span class="string">&quot;0&quot;</span> + date.<span class="title function_">getHours</span>();</span><br><span class="line">    <span class="keyword">var</span> min = date.<span class="title function_">getMinutes</span>() &gt;= <span class="number">10</span> ? date.<span class="title function_">getMinutes</span>() : <span class="string">&quot;0&quot;</span> + date.<span class="title function_">getMinutes</span>();</span><br><span class="line">    <span class="keyword">var</span> second = date.<span class="title function_">getSeconds</span>() &gt;= <span class="number">10</span> ? date.<span class="title function_">getSeconds</span>() : <span class="string">&quot;0&quot;</span> + date.<span class="title function_">getSeconds</span>();</span><br><span class="line">    <span class="keyword">return</span> year + <span class="string">&#x27;-&#x27;</span> + month + <span class="string">&#x27;-&#x27;</span> + day + <span class="string">&#x27; &#x27;</span> + hour + <span class="string">&#x27;:&#x27;</span> + min + <span class="string">&#x27;:&#x27;</span> + second;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
                 
             </div>
@@ -398,7 +482,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/categories/index.html">http://example.com/categories/index.html</a>
+                    <a href="http://example.com/2024/03/08/JS-%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1-Date/">http://example.com/2024/03/08/JS-%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1-Date/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -435,7 +519,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -479,18 +567,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2024/03/08/JS-%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1-Math/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="JS_常用对象_Math">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">JS_常用对象_Math</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -500,9 +587,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-08
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -511,7 +598,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -519,16 +613,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2024/03/08/JS-%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1-string/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="JS_常用对象_string">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">JS_常用对象_string</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -539,7 +633,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-08
                             </span>
                         <span class="publish-author">
                             
@@ -549,7 +643,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
