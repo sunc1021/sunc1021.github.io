@@ -4,11 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="LeetCode_34.在排序数组中查找元素的第一个和最后一个位置, 博客制作,个人经验分享,Java,JavaScript,等">
-    <meta name="description" content="题目描述
-给你一个按照非递减顺序排列的整数数组 nums，和一个目标值 target。请你找出给定目标值在数组中的开始位置和结束位置。
-如果数组中不存在目标值 target，返回 [-1, -1]。
-你必须设计并实现时间复杂度为 O(log">
+    <meta name="keywords" content="排序_冒泡排序, 博客制作,个人经验分享,Java,JavaScript,等">
+    <meta name="description" content="基本思想通过对待排序序列从前向后（从下标较小的元素开始）,依次比较相邻元素的值，若发现逆序则交换，使值较大的元素逐渐从前移向后部，就像水底下的气泡一样逐渐向上冒。
+时间复杂度O(n^2)
+规则通过分析我们发现：
+
+一共进行 数组的大小-1 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>LeetCode_34.在排序数组中查找元素的第一个和最后一个位置 | 四九年入国军</title>
+    <title>排序_冒泡排序 | 四九年入国军</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -291,12 +292,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">LeetCode_34.在排序数组中查找元素的第一个和最后一个位置</h1>
+                    <h1 class="description center-align post-title">排序_冒泡排序</h1>
                 </div>
             </div>
         </div>
@@ -320,12 +321,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/LeetCode/">
-                                <span class="chip bg-color">LeetCode</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
                             </a>
                         
-                            <a href="/tags/%E6%9F%A5%E6%89%BE/">
-                                <span class="chip bg-color">查找</span>
+                            <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                                <span class="chip bg-color">排序</span>
                             </a>
                         
                     </div>
@@ -340,28 +341,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-03-21
+                    2024-03-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-21
+                    2024-03-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    302
+                    509
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -381,15 +382,20 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
-<p>给你一个按照非递减顺序排列的整数数组 <code>nums</code>，和一个目标值 <code>target</code>。请你找出给定目标值在数组中的开始位置和结束位置。</p>
-<p>如果数组中不存在目标值 <code>target</code>，返回 <code>[-1, -1]</code>。</p>
-<p>你必须设计并实现时间复杂度为 <code>O(log n)</code> 的算法解决此问题。</p>
-</blockquote>
-<p>注意这是有<strong>重复数据</strong>的有序数组</p>
-<p><strong>普通二分查找是，当 nums[mid] &#x3D;&#x3D; target 时，直接返回 mid，而在本题中，则是要继续向左查找，看是否还有和 target 相等的数组元素</strong>。</p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] searchRange(<span class="type">int</span>[] nums, <span class="type">int</span> target) &#123;</span><br><span class="line">        <span class="type">int</span> x=left(nums,target);</span><br><span class="line">        <span class="keyword">if</span>(x == nums.length || nums[x] != target )&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;-<span class="number">1</span>,-<span class="number">1</span>&#125;;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;x,right(nums,target)&#125;;</span><br><span class="line">        &#125;   </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">left</span><span class="params">(<span class="type">int</span>[] a,<span class="type">int</span> target)</span>&#123;</span><br><span class="line">        <span class="type">int</span> i=<span class="number">0</span>,j=a.length-<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(i&lt;=j)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> (i+j)&gt;&gt;&gt;<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(target&lt;=a[mid])&#123;</span><br><span class="line">                j=mid-<span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                i=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">right</span><span class="params">(<span class="type">int</span>[] a,<span class="type">int</span> target)</span>&#123;</span><br><span class="line">        <span class="type">int</span> i=<span class="number">0</span>,j=a.length-<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(i&lt;=j)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> (i+j)&gt;&gt;&gt;<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(target&lt;a[mid])&#123;</span><br><span class="line">                j=mid-<span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                i=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i-<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                <h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><p>通过对待排序序列从前向后（从下标较小的元素开始）,依次比较相邻元素的值，若<strong>发现逆序则交换</strong>，使值<strong>较大的元素逐渐从前移向后部</strong>，就像水底下的气泡一样逐渐向上冒。</p>
+<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p>O(n^2)</p>
+<h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><p>通过分析我们发现：</p>
+<ul>
+<li>一共进行 数组的大小-1 次 大的循环</li>
+</ul>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">maoPao1</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] arr = &#123;<span class="number">3</span>, <span class="number">42</span>, <span class="number">63</span>, <span class="number">2</span>, <span class="number">12</span>, <span class="number">4</span>, <span class="number">53</span>, <span class="number">135</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; arr.length - <span class="number">1</span>; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[j];</span><br><span class="line">                arr[j] = arr[j + <span class="number">1</span>];</span><br><span class="line">                arr[j + <span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;第&quot;</span> + i + <span class="string">&quot;次排序&quot;</span>);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="优化比较次数"><a href="#优化比较次数" class="headerlink" title="优化比较次数"></a>优化比较次数</h2><p>每一趟排序的次数在逐渐的减少</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">maoPao2</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] arr = &#123;<span class="number">3</span>, <span class="number">42</span>, <span class="number">63</span>, <span class="number">2</span>, <span class="number">12</span>, <span class="number">4</span>, <span class="number">53</span>, <span class="number">135</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; arr.length - <span class="number">1</span> - i; j++) &#123;  <span class="comment">//优化比较次数</span></span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[j];</span><br><span class="line">                arr[j] = arr[j + <span class="number">1</span>];</span><br><span class="line">                arr[j + <span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;第&quot;</span> + (i + <span class="number">1</span>) + <span class="string">&quot;次排序&quot;</span>);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="优化比较轮数"><a href="#优化比较轮数" class="headerlink" title="优化比较轮数"></a>优化比较轮数</h2><p>若是<strong>特殊数组</strong>，如{1，2，3，4，5}，我们发现在某趟排序中，没有发生一次交换， 可以提前结束冒泡排序。</p>
+<p>设置一个信号量，假设这轮排序，已将排好，即没有进行交换</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">maoPao3</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] arr = &#123;<span class="number">3</span>, <span class="number">42</span>, <span class="number">63</span>, <span class="number">2</span>, <span class="number">12</span>, <span class="number">4</span>, <span class="number">53</span>, <span class="number">135</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="comment">//flag假设已经排好序了</span></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">flag</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; arr.length - <span class="number">1</span> - i; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[j];</span><br><span class="line">                arr[j] = arr[j + <span class="number">1</span>];</span><br><span class="line">                arr[j + <span class="number">1</span>] = temp;</span><br><span class="line">                <span class="comment">//若进行了交换，则没有排好，falg置为false，继续排序</span></span><br><span class="line">                flag = <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;第&quot;</span> + (i + <span class="number">1</span>) + <span class="string">&quot;次排序&quot;</span>);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">        <span class="comment">//若flag为true，则未进行交换，直接跳出循环</span></span><br><span class="line">        <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
                 
             </div>
@@ -404,12 +410,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/LeetCode/">
-                                    <span class="chip bg-color">LeetCode</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
                                 </a>
                             
-                                <a href="/tags/%E6%9F%A5%E6%89%BE/">
-                                    <span class="chip bg-color">查找</span>
+                                <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                                    <span class="chip bg-color">排序</span>
                                 </a>
                             
                         </div>
@@ -455,17 +461,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/03/21/%E6%95%B0%E7%BB%84/">
+                <a href="/2024/03/27/%E6%8E%92%E5%BA%8F-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="数组">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="排序_冒泡排序">
                         
-                        <span class="card-title">数组</span>
+                        <span class="card-title">排序_冒泡排序</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -475,9 +482,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -486,19 +493,16 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E7%BB%84/">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">排序</span>
                     </a>
                     
                 </div>
@@ -512,13 +516,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/03/19/Java_%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                <a href="/2024/03/25/Java-%E6%95%B0%E7%BB%84/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Java_数据类型">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Java_数据类型</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -529,7 +533,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-25
                             </span>
                         <span class="publish-author">
                             
@@ -544,6 +548,10 @@
                     
                     <a href="/tags/Java/">
                         <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
                 </div>
