@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="博客制作,个人经验分享,Java,JavaScript,等">
+    <meta name="keywords" content="Java_数组, 博客制作,个人经验分享,Java,JavaScript,等">
     <meta name="description" content="1.数组概述
 数组(Array)，是多个相同类型数据按一定顺序排列的集合，并使用一个名字命名，并通过编号的方式对这些数据进行统一管理。
 
@@ -23,7 +23,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>四九年入国军</title>
+    <title>Java_数组 | 四九年入国军</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -294,12 +294,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">Java_数组</h1>
                 </div>
             </div>
         </div>
@@ -357,14 +357,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    11 分
                 </div>
                 
 
@@ -529,14 +529,48 @@
 
 
 
-<h2 id="数值型数组特征值统计"><a href="#数值型数组特征值统计" class="headerlink" title="数值型数组特征值统计"></a>数值型数组特征值统计</h2><p>数组元素的赋值（开发中常用）</p>
-<p>数组的复制</p>
-<p>数组的反转</p>
-<p>数组的扩容与缩容</p>
-<p>数组元素查找</p>
-<p>顺序查找</p>
-<p>二分法</p>
-<p>数组的排序</p>
+<h3 id="4-2-数组的反转"><a href="#4-2-数组的反转" class="headerlink" title="4.2. 数组的反转"></a>4.2. 数组的反转</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">reserveArr</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] arr = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length / <span class="number">2</span>; i++) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[i];</span><br><span class="line">        arr[i] = arr[arr.length - <span class="number">1</span> - i];</span><br><span class="line">        arr[arr.length - <span class="number">1</span> - i] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(Arrays.toString(arr));</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-3-数组的排序"><a href="#4-3-数组的排序" class="headerlink" title="4.3. 数组的排序"></a>4.3. 数组的排序</h3><h4 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">maoPao3</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] arr = &#123;<span class="number">3</span>, <span class="number">42</span>, <span class="number">63</span>, <span class="number">2</span>, <span class="number">12</span>, <span class="number">4</span>, <span class="number">53</span>, <span class="number">135</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="comment">//flag假设已经排好序了</span></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">flag</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; arr.length - <span class="number">1</span> - i; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[j];</span><br><span class="line">                arr[j] = arr[j + <span class="number">1</span>];</span><br><span class="line">                arr[j + <span class="number">1</span>] = temp;</span><br><span class="line">                <span class="comment">//若进行了交换，则没有排好，falg置为false，继续排序</span></span><br><span class="line">                flag = <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;第&quot;</span> + (i + <span class="number">1</span>) + <span class="string">&quot;次排序&quot;</span>);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">        <span class="comment">//若flag为true，则未进行交换，直接跳出循环</span></span><br><span class="line">        <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 选择排序算法的实现。</span></span><br><span class="line"><span class="comment"> * 该方法不接受参数，也不返回任何值，它直接对传入的数组进行排序。</span></span><br><span class="line"><span class="comment"> * 使用选择排序算法，依次找出数组中的最小元素，并将其放置在数组的起始位置。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">SelectSort</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">// 初始化一个未排序的整型数组</span></span><br><span class="line">    <span class="type">int</span>[] arr = &#123;<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">42</span>, <span class="number">53</span>, <span class="number">6</span>, <span class="number">23</span>, <span class="number">4</span>, <span class="number">246</span>, <span class="number">24</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 遍历数组，进行排序</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="comment">// 假设当前元素为最小值</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">minIndex</span> <span class="operator">=</span> i;</span><br><span class="line">        <span class="type">int</span> <span class="variable">min</span> <span class="operator">=</span> arr[i];</span><br><span class="line">        <span class="comment">// 在剩余未排序部分中寻找最小值</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (min &gt; arr[j]) &#123;</span><br><span class="line">                min = arr[j];       <span class="comment">// 更新最小值</span></span><br><span class="line">                minIndex = j;       <span class="comment">// 更新最小值的索引</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 将找到的最小值与当前位置的值交换，以达到逐步排序的效果</span></span><br><span class="line">        <span class="keyword">if</span> (minIndex != i) &#123;</span><br><span class="line">            arr[minIndex] = arr[i];</span><br><span class="line">            arr[i] = min;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 下一轮排序开始前，可以打印一轮后的数组状态，这里已注释掉</span></span><br><span class="line">        System.out.println(<span class="string">&quot;~~~第&quot;</span> + (i + <span class="number">1</span>) + <span class="string">&quot;轮后~~~&quot;</span>);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-4-数组元素查找"><a href="#4-4-数组元素查找" class="headerlink" title="4.4 数组元素查找"></a>4.4 数组元素查找</h3><h4 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">sequentialSearch</span><span class="params">(<span class="type">int</span>[] array, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">    <span class="comment">// 从数组的第一个元素开始遍历</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">        <span class="comment">// 检查当前元素是否等于目标值</span></span><br><span class="line">        <span class="keyword">if</span> (array[i] == target) &#123;</span><br><span class="line">            <span class="comment">// 找到目标值，返回其索引</span></span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 若遍历完数组都没有找到目标值</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;   <span class="comment">// 返回-1表示未找到目标值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//左闭右闭</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">binarySearch</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> num)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> arr.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> (left + right) &gt;&gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (num &lt; arr[mid]) &#123;</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &lt; num) &#123;</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5-可变参数"><a href="#5-可变参数" class="headerlink" title="5.可变参数"></a>5.可变参数</h2><blockquote>
+<p>语法： 数据类型… 参数名</p>
+</blockquote>
+<p>特点</p>
+<ul>
+<li>1、带有可变参数方法的调用的时候，实参个数,可以是0个或者是多个</li>
+<li>2、可变参数只能放在参数列表的最后(一个方法只能有一个可变参数)</li>
+<li>3、可变参数可以当做数组来使用，也可以将数组作为参数</li>
+</ul>
+<p>场景：不确定参数个数的时候</p>
+<h3 id="可变惨定义"><a href="#可变惨定义" class="headerlink" title="可变惨定义"></a>可变惨定义</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">m1</span><span class="params">(<span class="type">int</span>... a)</span> &#123;</span><br><span class="line">    System.out.println(a[<span class="number">0</span>]);</span><br><span class="line">    System.out.println(a[<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="可变惨调用"><a href="#可变惨调用" class="headerlink" title="可变惨调用"></a>可变惨调用</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方式1</span></span><br><span class="line">m1(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>);</span><br><span class="line"><span class="comment">//方式2：</span></span><br><span class="line"><span class="type">int</span>[] arr = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">m1(arr);</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-值传递和引用传递"><a href="#6-值传递和引用传递" class="headerlink" title="6.值传递和引用传递"></a>6.值传递和引用传递</h2><p>值传递和引用传递</p>
+<ul>
+<li>值传递：传递的是值，所以原来的值本身不会改变，所有的基本类型属于值传递<ul>
+<li>String类型因为它是字符串常量，存储在常量池中，所以不能改变。所以与值传递特点相同</li>
+</ul>
+</li>
+<li>引用传递：传递的是地址，所以会对原来的内容有影响，所有引用数据类型都属于引用传递</li>
+</ul>
 
                 
             </div>
@@ -864,7 +898,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">13.5k</span>
+                        class="white-color">14.7k</span>
             
             
             
