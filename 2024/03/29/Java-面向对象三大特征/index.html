@@ -4,11 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="LeetCode_34.在排序数组中查找元素的第一个和最后一个位置, 博客制作,个人经验分享,Java,JavaScript,等">
-    <meta name="description" content="题目描述
-给你一个按照非递减顺序排列的整数数组 nums，和一个目标值 target。请你找出给定目标值在数组中的开始位置和结束位置。
-如果数组中不存在目标值 target，返回 [-1, -1]。
-你必须设计并实现时间复杂度为 O(log">
+    <meta name="keywords" content="Java_面向对象三大特征, 博客制作,个人经验分享,Java,JavaScript,等">
+    <meta name="description" content="a
+1.封装
+所谓封装，就是把客观事物封装成抽象概念的类，并且类可以把自己的数据和方法只向可信的类或者对象开放，向没必要开放的类或者对象隐藏信息。
+
+实现封装就是控制类或成员的可见性范围。这就需要依赖访问控制修饰符，也称为权限修饰符来控
+1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>LeetCode_34.在排序数组中查找元素的第一个和最后一个位置 | 四九年入国军</title>
+    <title>Java_面向对象三大特征 | 四九年入国军</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -291,12 +293,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">LeetCode_34.在排序数组中查找元素的第一个和最后一个位置</h1>
+                    <h1 class="description center-align post-title">Java_面向对象三大特征</h1>
                 </div>
             </div>
         </div>
@@ -320,12 +322,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9F%A5%E6%89%BE/">
-                                <span class="chip bg-color">查找</span>
-                            </a>
-                        
-                            <a href="/tags/LeetCode/">
-                                <span class="chip bg-color">LeetCode</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
                     </div>
@@ -340,28 +338,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-03-21
+                    2024-03-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-21
+                    2024-03-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    302
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    7 分
                 </div>
                 
 
@@ -381,16 +379,160 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
-<p>给你一个按照非递减顺序排列的整数数组 <code>nums</code>，和一个目标值 <code>target</code>。请你找出给定目标值在数组中的开始位置和结束位置。</p>
-<p>如果数组中不存在目标值 <code>target</code>，返回 <code>[-1, -1]</code>。</p>
-<p>你必须设计并实现时间复杂度为 <code>O(log n)</code> 的算法解决此问题。</p>
+                <p>a</p>
+<h2 id="1-封装"><a href="#1-封装" class="headerlink" title="1.封装"></a>1.封装</h2><blockquote>
+<p>所谓封装，就是把客观事物封装成抽象概念的类，并且类可以把自己的数据和方法只向可信的类或者对象开放，向没必要开放的类或者对象隐藏信息。</p>
 </blockquote>
-<p>注意这是有<strong>重复数据</strong>的有序数组</p>
-<p><strong>普通二分查找是，当 nums[mid] &#x3D;&#x3D; target 时，直接返回 mid，而在本题中，则是要继续向左查找，看是否还有和 target 相等的数组元素</strong>。</p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] searchRange(<span class="type">int</span>[] nums, <span class="type">int</span> target) &#123;</span><br><span class="line">        <span class="type">int</span> x=left(nums,target);</span><br><span class="line">        <span class="keyword">if</span>(x == nums.length || nums[x] != target )&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;-<span class="number">1</span>,-<span class="number">1</span>&#125;;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;x,right(nums,target)&#125;;</span><br><span class="line">        &#125;   </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">left</span><span class="params">(<span class="type">int</span>[] a,<span class="type">int</span> target)</span>&#123;</span><br><span class="line">        <span class="type">int</span> i=<span class="number">0</span>,j=a.length-<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(i&lt;=j)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> (i+j)&gt;&gt;&gt;<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(target&lt;=a[mid])&#123;</span><br><span class="line">                j=mid-<span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                i=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">right</span><span class="params">(<span class="type">int</span>[] a,<span class="type">int</span> target)</span>&#123;</span><br><span class="line">        <span class="type">int</span> i=<span class="number">0</span>,j=a.length-<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(i&lt;=j)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> (i+j)&gt;&gt;&gt;<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(target&lt;a[mid])&#123;</span><br><span class="line">                j=mid-<span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                i=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i-<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实现封装就是控制类或成员的可见性范围。这就需要依赖访问控制修饰符，也称为权限修饰符来控</p>
+<h3 id="1-1成员变量私有化"><a href="#1-1成员变量私有化" class="headerlink" title="1.1成员变量私有化"></a>1.1成员变量私有化</h3><blockquote>
+<p>概述：私有化类的成员变量，提供公共的<strong>get和set方法</strong>，对外暴露获取和修改属性的功能。</p>
+</blockquote>
+<p>例子</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">IT</span> &#123;</span><br><span class="line">    <span class="comment">//姓名</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="comment">//年龄</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line">    <span class="comment">//技术方向</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">String</span> <span class="variable">TechnicalDirection</span> <span class="operator">=</span> <span class="string">&quot;java&quot;</span>;</span><br><span class="line">    <span class="comment">//工作年限</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> workYear;</span><br><span class="line">    String workPlace;</span><br><span class="line">    String office;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">work</span><span class="params">(String workPlace, String office)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.workPlace = workPlace;</span><br><span class="line">        <span class="built_in">this</span>.office = office;</span><br><span class="line">        System.out.println(<span class="string">&quot;姓名：&quot;</span> + getName());</span><br><span class="line">        System.out.println(<span class="string">&quot;年龄：&quot;</span> + getAge());</span><br><span class="line">        System.out.println(<span class="string">&quot;技术方向：&quot;</span> + getTechnicalDirection());</span><br><span class="line">        System.out.println(<span class="string">&quot;工作单位：&quot;</span> + workPlace);</span><br><span class="line">        System.out.println(<span class="string">&quot;职务：&quot;</span> + office);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setNmae</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getAge</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAge</span><span class="params">(<span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (age &gt; <span class="number">15</span>) &#123;</span><br><span class="line">            <span class="built_in">this</span>.age = age;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;年龄必须大于15岁&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//技术方向只读</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getTechnicalDirection</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> TechnicalDirection;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getWorkYear</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> workYear;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setWorkYear</span><span class="params">(<span class="type">int</span> workYear)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.workYear = workYear;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestIT</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        IT iter=<span class="keyword">new</span> <span class="title class_">IT</span>();</span><br><span class="line">        iter.setNmae(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">        iter.setAge(<span class="number">35</span>);</span><br><span class="line">        iter.setWorkYear(<span class="number">10</span>);</span><br><span class="line">        iter.work(<span class="string">&quot;qf&quot;</span>,<span class="string">&quot;学生&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
+
+<h3 id="1-2成员变量封装优点"><a href="#1-2成员变量封装优点" class="headerlink" title="1.2成员变量封装优点"></a>1.2成员变量封装优点</h3><ul>
+<li>让使用者只能通过事先预定的方法来 访问数据 ，从而可以在该方法里面加入控制逻辑，限制对成员变量的不合理访问。还可以进行数据检查，从而有利于保证对象信息的完整性。</li>
+<li>便于修改 ，提高代码的可维护性。主要说的是隐藏的部分，在内部修改了，如果其对外可以的访问方式不变的话，外部根本感觉不到它的修改。例如：Java8-&gt;Java9，String从char[]转为byte[]内部实现，而对外的方法不变，我们使用者根本感觉不到它内部的修改。</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>开发中，一般成员实例变量都习惯使用private修饰，再提供相应的public权限的get&#x2F;set方法访问。</li>
+<li>对于final的实例变量，不提供set()方法。（后面final关键字的时候讲）</li>
+<li>对于static final的成员变量，习惯上使用public修饰。</li>
+</ul>
+<h2 id="2-继承"><a href="#2-继承" class="headerlink" title="2.继承"></a>2.继承</h2><blockquote>
+<p>概念：类与类之间属性和方法的赠与(父类)和获得(子类)</p>
+</blockquote>
+<h3 id="2-1作用"><a href="#2-1作用" class="headerlink" title="2.1作用"></a>2.1作用</h3><p>​	提高代码的重复性</p>
+<h3 id="2-2语法"><a href="#2-2语法" class="headerlink" title="2.2语法"></a>2.2语法</h3><p>​			public class 子类 extends 父类{}</p>
+<h3 id="2-3特点"><a href="#2-3特点" class="headerlink" title="2.3特点"></a>2.3特点</h3><ol>
+<li><p>子类继承父类，子类可以继承到父类的属性和方法</p>
+</li>
+<li><p>子类继承父类，子类可以定义独有的属性和方法</p>
+</li>
+<li><p>在java中只能是单继承，及一个子类只能有一个父类</p>
+</li>
+<li><p>在java中支持多层继承，及父类还可以有自己父类，java中最顶层的父类是Object</p>
+<p>(所有没有显示的写extends继承默认都是Object类的子类)</p>
+</li>
+<li><p>不能被继承</p>
+<ol>
+<li>私有的属性和方法不能被继承</li>
+<li>构造方法不能被继承</li>
+<li>使用默认修饰符修饰属性和方法在不同包中不能被继承</li>
+</ol>
+</li>
+<li><p><strong>继承中</strong>：</p>
+<ul>
+<li>成员变量访问特点：看等号左边是谁，先调用谁中的成员变量</li>
+<li>成员方法访问特点：看new的是谁，先调用谁中的方法</li>
+</ul>
+</li>
+</ol>
+<h2 id="3-方法重写"><a href="#3-方法重写" class="headerlink" title="3.方法重写"></a>3.方法重写</h2><blockquote>
+<p>父类的所有方法子类都会继承，但是当某个方法被继承到子类之后，子类觉得父类原来的实现不适合于自己当前的类，该怎么办呢？子类可以对从父类中继承来的方法进行改造，我们称为方法的<code>重写(override、overwrite)</code>。也称为方法的<code>重置</code>、<code>覆盖</code>。</p>
+</blockquote>
+<p>前提：继承</p>
+<p>访问：看new的是谁，先调用谁中，如果new的是子类，调用子类的重写方法，子类没有，找父类</p>
+<p>检测是否为重写方法：在方法上写<code>@Override</code></p>
+<h3 id="3-1注意事项"><a href="#3-1注意事项" class="headerlink" title="3.1注意事项"></a>3.1注意事项</h3><ol>
+<li>子类重写父类方法后，权限必须要保证大于父类权限（权限指的是访问权限）<br>public	&gt;	protected	&gt;	默认	&gt;	private</li>
+<li>子类方法重写父类方法，方法和参数名要<strong>一样</strong></li>
+<li>私有方法、构造方法、静态方法<strong>不能重写</strong></li>
+<li>子类重写父类方法后，返回值类型应该是父类方法返回值类型的子类类型</li>
+</ol>
+<h2 id="4-super和this"><a href="#4-super和this" class="headerlink" title="4.super和this"></a>4.super和this</h2><h3 id="4-1继承中构造方法的特点"><a href="#4-1继承中构造方法的特点" class="headerlink" title="4.1继承中构造方法的特点"></a>4.1继承中构造方法的特点</h3><ol>
+<li>new子类对象是，会先初始化父类（先走父类的无参构造）</li>
+<li>每个构造方法的第一行，默认会有一个<code>super()</code></li>
+</ol>
+<h3 id="4-2super的具体使用"><a href="#4-2super的具体使用" class="headerlink" title="4.2super的具体使用"></a>4.2super的具体使用</h3><ol>
+<li>概述：代表父类引用</li>
+<li>作用：可以调用父类的成员</li>
+<li>使用：在第一行使用<ol>
+<li>调用父类构造方法：在子类的构造中写<br><code>super()</code>——&gt;调用父类无参构造<br><code>super(实参)</code>——&gt;调用父类有参构造</li>
+<li>调用父类成员变量<br><code>super.成员变量</code></li>
+<li>调用父类成员方法<br><code>super.成员方法</code></li>
+</ol>
+</li>
+</ol>
+<h3 id="4-3this的具体使用"><a href="#4-3this的具体使用" class="headerlink" title="4.3this的具体使用"></a>4.3this的具体使用</h3><ol>
+<li><p>概念：代表当前的对象</p>
+</li>
+<li><p>作用</p>
+<ol>
+<li>区分重名的成员变量和局部变量</li>
+<li>调用当前对象中的成员</li>
+</ol>
+</li>
+<li><p>使用：</p>
+<ol>
+<li><p>调用当前对象的构造：在构造里写</p>
+<p><code>this()</code>——&gt;调用当前对象无参构造<br><code>this(实参)</code>——&gt;调用当前 对象有参构造</p>
+</li>
+<li><p>调用当前对象的成员变量<br><code>this.成员变量名</code></p>
+</li>
+<li><p>调用当前对象的成员方法<br><code>this.成员方法名（实参）</code></p>
+</li>
+</ol>
+</li>
+<li><p>注意：<br>不管super还是this，只要在<strong>构造方法中</strong>使用，都必须在第一行，所以二者不能同时写出来</p>
+</li>
+</ol>
+<h3 id="4-4继承特点"><a href="#4-4继承特点" class="headerlink" title="4.4继承特点"></a>4.4继承特点</h3><p>1.继承只支持单继承，不能多继承</p>
+<p>2.支持多层继承</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">A</span> <span class="keyword">extends</span> <span class="title class_">B</span>&#123;&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">A</span> <span class="keyword">extends</span> <span class="title class_">C</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.一个父类可以又多个子类</p>
+<p>4. </p>
+<ul>
+<li>构造方法不能继承，不能重写</li>
+<li>私有方法可以继承，但不能重写</li>
+<li>静态方法可以继承，但不能重写</li>
+</ul>
+<h3 id="4-5为父类中private属性赋值"><a href="#4-5为父类中private属性赋值" class="headerlink" title="4.5为父类中private属性赋值"></a>4.5为父类中private属性赋值</h3><p>使用get、set方法</p>
+<h2 id="5-多态"><a href="#5-多态" class="headerlink" title="5.多态"></a>5.多态</h2><ul>
+<li>不要从字面意思理解这两个字，要从使用形式上掌握</li>
+<li>要知道多态的好处</li>
+<li>要知道多态的前提</li>
+</ul>
+<h3 id="5-1多态介绍"><a href="#5-1多态介绍" class="headerlink" title="5.1多态介绍"></a>5.1多态介绍</h3><ol>
+<li>前提<ol>
+<li>必须有字符类继承或接口实现关系</li>
+<li>必须有方法的重写（没有重写，多态没有意义），多态主要完重写方法</li>
+<li>new对象：父类引用指向子类对象<br><code>Fu fu = new Zi( )</code>  ——&gt;理解为大类型接受一个小类型数据，如<code>double a = 10</code></li>
+</ol>
+</li>
+<li>多态不能调用子类特有功能</li>
+</ol>
+<h3 id="5-2多态的基本使用"><a href="#5-2多态的基本使用" class="headerlink" title="5.2多态的基本使用"></a>5.2多态的基本使用</h3><h3 id="5-3多态下成员访问特点"><a href="#5-3多态下成员访问特点" class="headerlink" title="5.3多态下成员访问特点"></a>5.3多态下成员访问特点</h3><p>成员变量：看等号左边是谁，先调用谁中的变量</p>
+<p>成员方法：看new的是谁，先调用谁中的方法</p>
+<h3 id="5-4多态的好处"><a href="#5-4多态的好处" class="headerlink" title="5.4多态的好处"></a>5.4多态的好处</h3><p>1.问题描述</p>
+<p>如果使用原始方式new对象（等号左右一致），即能调用重写的，还能调用继承的，还能调用自己特有的成员</p>
+<p>但多态方式new对像，<strong>只能调用重写的</strong>，那为社么还用多态呢？</p>
+<p>2.原始方式好处</p>
+<ol>
+<li>优点：即能调用重写的，还能调用继承的，还能调用自己特有的成员</li>
+<li>缺点：扩展性差</li>
+</ol>
+<p>3.多态的好处</p>
+<pre><code>1. 优点：扩展性强
+1. 缺点：不能直接调用子类特有功能
+</code></pre>
+<h3 id="5-5多态中的转型"><a href="#5-5多态中的转型" class="headerlink" title="5.5多态中的转型"></a>5.5多态中的转型</h3><h4 id="5-5-1向上转型"><a href="#5-5-1向上转型" class="headerlink" title="5.5.1向上转型"></a>5.5.1向上转型</h4><p>父类引用指向子类对象</p>
+<p><code>父类类型 对象名 = new 子类对象（）</code></p>
+<p>如：double b &#x3D; 10；</p>
+<h4 id="5-5-2向下转型"><a href="#5-5-2向下转型" class="headerlink" title="5.5.2向下转型"></a>5.5.2向下转型</h4><p>将大类型强制转为小类型，好比强制类型转换<br><code>父类类型 对象名1 = new 子类对象（）</code>-&gt; 向上转型 -&gt; double b&#x3D;1</p>
+<p><code>子类类型  对象2 = (子类类型)对象1</code> -&gt; 向下转型 -&gt; int i&#x3D;(int)b</p>
+<h3 id="5-6转型可能会出现问题"><a href="#5-6转型可能会出现问题" class="headerlink" title="5.6转型可能会出现问题"></a>5.6转型可能会出现问题</h3><ol>
+<li>如果等号左右两边类型不一致，会出现类型转换异常</li>
+<li>向下转型之前，先判断类型：instanceof，判断结果为boolean</li>
+<li>对象名 instanceof 类型 -&gt; 判断的是关键字前面的对象是否符合关键字后面的类型</li>
+</ol>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
                 
             </div>
             <hr/>
@@ -404,12 +546,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9F%A5%E6%89%BE/">
-                                    <span class="chip bg-color">查找</span>
-                                </a>
-                            
-                                <a href="/tags/LeetCode/">
-                                    <span class="chip bg-color">LeetCode</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
                                 </a>
                             
                         </div>
@@ -459,13 +597,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/03/21/%E6%95%B0%E7%BB%84/">
+                <a href="/2024/04/01/Java-%E4%B8%89%E4%B8%AA%E4%BF%AE%E9%A5%B0%E7%AC%A6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="数组">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Java_三个修饰符">
                         
-                        <span class="card-title">数组</span>
+                        <span class="card-title">Java_三个修饰符</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -476,7 +614,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-21
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-01
                         </span>
                         <span class="publish-author">
                             
@@ -493,14 +631,6 @@
                         <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E7%BB%84/">
-                        <span class="chip bg-color">数组</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -512,13 +642,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/03/19/Java_%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                <a href="/2024/03/27/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Java_数据类型">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Java_面向对象（基础）">
                         
-                        <span class="card-title">Java_数据类型</span>
+                        <span class="card-title">Java_面向对象（基础）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -529,7 +659,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-27
                             </span>
                         <span class="publish-author">
                             

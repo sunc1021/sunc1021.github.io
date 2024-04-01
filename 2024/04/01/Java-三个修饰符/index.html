@@ -4,11 +4,18 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="LeetCode_34.在排序数组中查找元素的第一个和最后一个位置, 博客制作,个人经验分享,Java,JavaScript,等">
-    <meta name="description" content="题目描述
-给你一个按照非递减顺序排列的整数数组 nums，和一个目标值 target。请你找出给定目标值在数组中的开始位置和结束位置。
-如果数组中不存在目标值 target，返回 [-1, -1]。
-你必须设计并实现时间复杂度为 O(log">
+    <meta name="keywords" content="Java_三个修饰符, 博客制作,个人经验分享,Java,JavaScript,等">
+    <meta name="description" content="一、abstract1.1抽象类特点：不能被实例化（不能new对象）
+作用：
+
+当作父类，提供共性的属性和方法
+当作父类的引用，指向子类的对象（使用多态）
+
+1.2抽象方法特点：
+
+不能有方法体
+抽象方法必须在抽象类中
+必须要被子类重写，除">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +27,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>LeetCode_34.在排序数组中查找元素的第一个和最后一个位置 | 四九年入国军</title>
+    <title>Java_三个修饰符 | 四九年入国军</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -291,12 +298,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">LeetCode_34.在排序数组中查找元素的第一个和最后一个位置</h1>
+                    <h1 class="description center-align post-title">Java_三个修饰符</h1>
                 </div>
             </div>
         </div>
@@ -320,12 +327,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9F%A5%E6%89%BE/">
-                                <span class="chip bg-color">查找</span>
-                            </a>
-                        
-                            <a href="/tags/LeetCode/">
-                                <span class="chip bg-color">LeetCode</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
                     </div>
@@ -340,21 +343,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-03-21
+                    2024-04-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-21
+                    2024-04-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    302
+                    369
                 </div>
                 
 
@@ -381,15 +384,42 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
-<p>给你一个按照非递减顺序排列的整数数组 <code>nums</code>，和一个目标值 <code>target</code>。请你找出给定目标值在数组中的开始位置和结束位置。</p>
-<p>如果数组中不存在目标值 <code>target</code>，返回 <code>[-1, -1]</code>。</p>
-<p>你必须设计并实现时间复杂度为 <code>O(log n)</code> 的算法解决此问题。</p>
-</blockquote>
-<p>注意这是有<strong>重复数据</strong>的有序数组</p>
-<p><strong>普通二分查找是，当 nums[mid] &#x3D;&#x3D; target 时，直接返回 mid，而在本题中，则是要继续向左查找，看是否还有和 target 相等的数组元素</strong>。</p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] searchRange(<span class="type">int</span>[] nums, <span class="type">int</span> target) &#123;</span><br><span class="line">        <span class="type">int</span> x=left(nums,target);</span><br><span class="line">        <span class="keyword">if</span>(x == nums.length || nums[x] != target )&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;-<span class="number">1</span>,-<span class="number">1</span>&#125;;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">int</span>[]&#123;x,right(nums,target)&#125;;</span><br><span class="line">        &#125;   </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">left</span><span class="params">(<span class="type">int</span>[] a,<span class="type">int</span> target)</span>&#123;</span><br><span class="line">        <span class="type">int</span> i=<span class="number">0</span>,j=a.length-<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(i&lt;=j)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> (i+j)&gt;&gt;&gt;<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(target&lt;=a[mid])&#123;</span><br><span class="line">                j=mid-<span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                i=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">right</span><span class="params">(<span class="type">int</span>[] a,<span class="type">int</span> target)</span>&#123;</span><br><span class="line">        <span class="type">int</span> i=<span class="number">0</span>,j=a.length-<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(i&lt;=j)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> (i+j)&gt;&gt;&gt;<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(target&lt;a[mid])&#123;</span><br><span class="line">                j=mid-<span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                i=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i-<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+                <h2 id="一、abstract"><a href="#一、abstract" class="headerlink" title="一、abstract"></a>一、abstract</h2><h3 id="1-1抽象类"><a href="#1-1抽象类" class="headerlink" title="1.1抽象类"></a>1.1抽象类</h3><p>特点：不能被实例化（不能new对象）</p>
+<p>作用：</p>
+<ol>
+<li>当作父类，提供共性的属性和方法</li>
+<li>当作父类的引用，指向子类的对象（使用多态）</li>
+</ol>
+<h3 id="1-2抽象方法"><a href="#1-2抽象方法" class="headerlink" title="1.2抽象方法"></a>1.2抽象方法</h3><p>特点：</p>
+<ol>
+<li>不能有方法体</li>
+<li>抽象方法必须在抽象类中</li>
+<li>必须要被子类重写，除非子类也是抽象类</li>
+</ol>
+<p>作用：约束子类</p>
+<h2 id="二、static"><a href="#二、static" class="headerlink" title="二、static"></a>二、static</h2><h3 id="2-1静态属性"><a href="#2-1静态属性" class="headerlink" title="2.1静态属性"></a>2.1静态属性</h3><p>修饰的属性：静态属性(类属性)</p>
+<p>静态变量：通过<code>类名.属性名</code>调用</p>
+<ul>
+<li>1、在类的对象之间是共享的</li>
+</ul>
+<p>应用场景：在多个对象之间共享变量的时候，应该使用静态变量</p>
+<h3 id="2-2静态方法"><a href="#2-2静态方法" class="headerlink" title="2.2静态方法"></a>2.2静态方法</h3><p>特点：</p>
+<ol>
+<li>静态方法只能访问静态成员（成员、属性）</li>
+<li>非静态方法中可以访问静态成员</li>
+<li>静态方法可以被继承、能被重写</li>
+<li>静态方法不能使用super和this</li>
+<li>静态方法不能被abstract修饰</li>
+</ol>
+<p>适用场景：工具类。如：Arrays，System工具类等</p>
+<h3 id="2-3静态代码块"><a href="#2-3静态代码块" class="headerlink" title="2.3静态代码块"></a>2.3静态代码块</h3><p>特点：当类加载时执行，优先于构造方法，且只执行一次</p>
+<p>适用场景：适用于做初始化工作，且只需执行一次。如：链接数据库等</p>
+<h3 id="2-4类加载时机"><a href="#2-4类加载时机" class="headerlink" title="2.4类加载时机"></a>2.4类加载时机</h3><ol>
+<li>创建对象时触发类加载</li>
+<li>创建子类对象的时触发类加载</li>
+<li>调用类中静态成员时触发类加载</li>
+<li>Class.forName（“全限定名”） 主动触发类加载</li>
+</ol>
 
                 
             </div>
@@ -404,12 +434,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9F%A5%E6%89%BE/">
-                                    <span class="chip bg-color">查找</span>
-                                </a>
-                            
-                                <a href="/tags/LeetCode/">
-                                    <span class="chip bg-color">LeetCode</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
                                 </a>
                             
                         </div>
@@ -455,17 +481,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/03/21/%E6%95%B0%E7%BB%84/">
+                <a href="/2024/04/01/Java-%E4%B8%89%E4%B8%AA%E4%BF%AE%E9%A5%B0%E7%AC%A6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="数组">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Java_三个修饰符">
                         
-                        <span class="card-title">数组</span>
+                        <span class="card-title">Java_三个修饰符</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -475,9 +502,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -486,19 +513,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/Java/">
                         <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E7%BB%84/">
-                        <span class="chip bg-color">数组</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
                     </a>
                     
                 </div>
@@ -512,13 +532,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/03/19/Java_%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                <a href="/2024/03/29/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Java_数据类型">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Java_面向对象三大特征">
                         
-                        <span class="card-title">Java_数据类型</span>
+                        <span class="card-title">Java_面向对象三大特征</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -529,7 +549,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-29
                             </span>
                         <span class="publish-author">
                             
