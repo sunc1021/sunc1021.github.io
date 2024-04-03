@@ -15,7 +15,7 @@
 
 不能有方法体
 抽象方法必须在抽象类中
-必须要被子类重写，除">
+子类必须重写，除非子">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -350,14 +350,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-01
+                    2024-04-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    369
+                    539
                 </div>
                 
 
@@ -394,10 +394,11 @@
 <ol>
 <li>不能有方法体</li>
 <li>抽象方法必须在抽象类中</li>
-<li>必须要被子类重写，除非子类也是抽象类</li>
+<li><strong>子类必须重写</strong>，除非子类也是抽象类</li>
 </ol>
 <p>作用：约束子类</p>
-<h2 id="二、static"><a href="#二、static" class="headerlink" title="二、static"></a>二、static</h2><h3 id="2-1静态属性"><a href="#2-1静态属性" class="headerlink" title="2.1静态属性"></a>2.1静态属性</h3><p>修饰的属性：静态属性(类属性)</p>
+<h2 id="二、static"><a href="#二、static" class="headerlink" title="二、static"></a>二、static</h2><p>修饰属性、方法、代码块、内部类</p>
+<h3 id="2-1静态属性"><a href="#2-1静态属性" class="headerlink" title="2.1静态属性"></a>2.1静态属性</h3><p>修饰的属性：静态属性(类属性)</p>
 <p>静态变量：通过<code>类名.属性名</code>调用</p>
 <ul>
 <li>1、在类的对象之间是共享的</li>
@@ -419,6 +420,35 @@
 <li>创建子类对象的时触发类加载</li>
 <li>调用类中静态成员时触发类加载</li>
 <li>Class.forName（“全限定名”） 主动触发类加载</li>
+</ol>
+<h2 id="三、final"><a href="#三、final" class="headerlink" title="三、final"></a>三、final</h2><p>修饰：属性、方法、类</p>
+<h3 id="3-1修饰类"><a href="#3-1修饰类" class="headerlink" title="3.1修饰类"></a>3.1修饰类</h3><p>最终类</p>
+<p>特点：不能被继承</p>
+<h3 id="3-2修饰方法"><a href="#3-2修饰方法" class="headerlink" title="3.2修饰方法"></a>3.2修饰方法</h3><p>最终方法</p>
+<p>特点：可以被继承、但不能被重写</p>
+<h3 id="3-3修饰变量"><a href="#3-3修饰变量" class="headerlink" title="3.3修饰变量"></a>3.3修饰变量</h3><p>常量</p>
+<p>常量特点：名字全部<strong>大写</strong></p>
+<p>特点：</p>
+<ol>
+<li>必须要赋值<ol>
+<li>非静态常量<ol>
+<li>直接赋值</li>
+<li>动态代码块</li>
+<li>构造方法（所有构造方法都要写）</li>
+</ol>
+</li>
+<li>静态常量<ol>
+<li>直接赋值</li>
+<li>静态代码块</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>常量不能修改<ol>
+<li>基本类型：值不能改<br><code>finall int a = 10;</code><br><code>int b = 20;	//报错</code></li>
+<li>引用类型：地址不能修改<br><code>final MyClass m = new MyClass();</code><br><code>m.num=10;</code><br><code>m.num=20;	//可修改</code></li>
+</ol>
+</li>
 </ol>
 
                 
@@ -481,18 +511,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/04/01/Java-%E4%B8%89%E4%B8%AA%E4%BF%AE%E9%A5%B0%E7%AC%A6/">
+                <a href="/2024/04/02/Java-%E6%8E%A5%E5%8F%A3%E5%92%8C%E5%86%85%E9%83%A8%E7%B1%BB/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Java_三个修饰符">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Java_接口和内部类">
                         
-                        <span class="card-title">Java_三个修饰符</span>
+                        <span class="card-title">Java_接口和内部类</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -502,9 +531,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-01
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-02
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -513,7 +542,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -741,7 +769,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">18.8k</span>
+                        class="white-color">24.2k</span>
             
             
             

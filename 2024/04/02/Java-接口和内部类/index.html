@@ -4,14 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JS_常用对象_Math, 博客制作,个人经验分享,Java,JavaScript,等">
-    <meta name="description" content="Math
-Math 是 js 的一个内置对象，提供了一堆的方法帮助我们操作 数字
-
-1、Math的常用方法1.1 random
-Math.random() 这个方法是用来生成一个 0 ~ 1 之间的随机数
-
-每次执行生成的数字都不一样，但是">
+    <meta name="keywords" content="Java_接口和内部类, 博客制作,个人经验分享,Java,JavaScript,等">
+    <meta name="description" content="a
+一、接口在JAVA编程语言中是一个抽象类型，是抽象方法的集合，接口通常以interface来声明。一个类通过继承接口的方式，从而来继承接口的抽象方法。
+1.1接口特点
+接口中每一个方法也是隐式抽象的,接口中的方法会被隐式的指定为 pub">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +20,7 @@ Math.random() 这个方法是用来生成一个 0 ~ 1 之间的随机数
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JS_常用对象_Math | 四九年入国军</title>
+    <title>Java_接口和内部类 | 四九年入国军</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -294,12 +291,12 @@ Math.random() 这个方法是用来生成一个 0 ~ 1 之间的随机数
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JS_常用对象_Math</h1>
+                    <h1 class="description center-align post-title">Java_接口和内部类</h1>
                 </div>
             </div>
         </div>
@@ -323,8 +320,8 @@ Math.random() 这个方法是用来生成一个 0 ~ 1 之间的随机数
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JavaScript/">
-                                <span class="chip bg-color">JavaScript</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
                     </div>
@@ -339,28 +336,28 @@ Math.random() 这个方法是用来生成一个 0 ~ 1 之间的随机数
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-03-08
+                    2024-04-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-08
+                    2024-04-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    374
+                    2.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    8 分
                 </div>
                 
 
@@ -380,51 +377,195 @@ Math.random() 这个方法是用来生成一个 0 ~ 1 之间的随机数
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ul>
-<li>Math 是 js 的一个内置对象，提供了一堆的方法帮助我们操作 <strong>数字</strong></li>
+                <p>a</p>
+<h2 id="一、接口"><a href="#一、接口" class="headerlink" title="一、接口"></a>一、接口</h2><p>在JAVA编程语言中是一个抽象类型，是抽象方法的集合，接口通常以interface来声明。一个类通过继承接口的方式，从而来继承接口的抽象方法。</p>
+<h3 id="1-1接口特点"><a href="#1-1接口特点" class="headerlink" title="1.1接口特点"></a>1.1接口特点</h3><ul>
+<li>接口中每一个方法也是隐式抽象的,接口中的方法会被隐式的指定为 <strong>public abstract</strong>（只能是 public abstract，其他修饰符都会报错）。</li>
+<li>接口中可以含有变量，但是接口中的变量会被隐式的指定为 <strong>public static final</strong> 变量（并且只能是 public，用 private 修饰会报编译错误）。</li>
+<li>接口中的方法是不能在接口中实现的，只能由实现接口的类来实现接口中的方法。</li>
 </ul>
-<h3 id="1、Math的常用方法"><a href="#1、Math的常用方法" class="headerlink" title="1、Math的常用方法"></a>1、Math的常用方法</h3><h4 id="1-1-random"><a href="#1-1-random" class="headerlink" title="1.1 random"></a>1.1 random</h4><ul>
-<li><p><code>Math.random()</code> 这个方法是用来生成一个 <code>0 ~ 1</code> 之间的随机数</p>
-</li>
-<li><p>每次执行生成的数字都不一样，但是一定是 <code>0 ~ 1</code> 之间的</p>
-</li>
-<li><p>生成的数字包含 0 ，但是不包含 1</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="title class_">Math</span>.<span class="title function_">random</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num) <span class="comment">// 得到一个随机数</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="1-2-round"><a href="#1-2-round" class="headerlink" title="1.2 round"></a>1.2 round</h4><ul>
-<li><p><code>Math.round()</code> 是将一个小数 <strong>四舍五入</strong> 变成一个整数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10.1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">round</span>(num)) <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">10.6</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">round</span>(num2)) <span class="comment">// 11</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="1-3-abs"><a href="#1-3-abs" class="headerlink" title="1.3 abs"></a>1.3 abs</h4><ul>
-<li><p><code>Math.abs()</code> 是返回一个数字的绝对值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = -<span class="number">10</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(math.<span class="title function_">abs</span>(num)) <span class="comment">// 10</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="1-4-ceil"><a href="#1-4-ceil" class="headerlink" title="1.4 ceil"></a>1.4 ceil</h4><ul>
-<li><p><code>Math.ceil()</code> 是将一个小数 <strong>向上取整</strong> 得到的整数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10.1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">ceil</span>(num)) <span class="comment">// 11</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">10.9</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">ceil</span>(num2)) <span class="comment">// 11</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="1-5-floor"><a href="#1-5-floor" class="headerlink" title="1.5 floor"></a>1.5 floor</h4><ul>
-<li><p><code>Math.floor()</code> 是将一个小数 <strong>向下取整</strong> 的到的整数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10.1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">floor</span>(num)) <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">10.9</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">floor</span>(num2)) <span class="comment">// 10</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="1-6-max"><a href="#1-6-max" class="headerlink" title="1.6 max"></a>1.6 max</h4><ul>
-<li><p><code>Math.max()</code> 得到的是你传入的几个数字之中最大的那个数字</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">max</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)) <span class="comment">// 5</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="1-7-min"><a href="#1-7-min" class="headerlink" title="1.7 min"></a>1.7 min</h4><ul>
-<li><p><code>Math.min()</code> 得到的是你传入的几个数字之中最小的那个数字</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">min</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="1-8-PI"><a href="#1-8-PI" class="headerlink" title="1.8 PI"></a>1.8 PI</h4><ul>
-<li><p><code>Math.PI</code> 得到的是 <code>π</code> 的值，也就是 <code>3.1415936...</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="property">PI</span>) <span class="comment">// 3.141592653589793</span></span><br></pre></td></tr></table></figure>
-
+<h3 id="1-2接口使用"><a href="#1-2接口使用" class="headerlink" title="1.2接口使用"></a>1.2接口使用</h3><p>特点：</p>
 <ul>
-<li>因为计算机的计算精度问题，只能得到小数点后 15 位</li>
-<li>使用 Math.PI 的时候，是不需要加 () 的</li>
+<li>没有构造方法，不能创建对象</li>
+<li>只能定义：公开静态常量、公开抽象方法</li>
+<li>没有构造方法、动态、静态代码块</li>
 </ul>
-</li>
+<p>声明：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[可见度] interface 接口名称 [extends 其他的接口名] &#123;</span><br><span class="line">        <span class="comment">// 声明变量</span></span><br><span class="line">        <span class="comment">// 抽象方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3接口与类的相似点"><a href="#1-3接口与类的相似点" class="headerlink" title="1.3接口与类的相似点"></a>1.3接口与类的相似点</h3><ul>
+<li>一个接口可以有多个方法。</li>
+<li>接口文件保存在 .java 结尾的文件中，文件名使用接口名。</li>
+<li>接口的字节码文件保存在 .class 结尾的文件中。</li>
+<li>接口相应的字节码文件必须在与包名称相匹配的目录结构中。</li>
 </ul>
+<h3 id="1-4接口与类的区别"><a href="#1-4接口与类的区别" class="headerlink" title="1.4接口与类的区别"></a>1.4接口与类的区别</h3><ul>
+<li>接口不能用于实例化对象。</li>
+<li>接口没有构造方法。</li>
+<li>接口中所有的方法必须是抽象方法，Java 8 之后 接口中可以使用 default 关键字修饰的非抽象方法。</li>
+<li>接口不能包含成员变量，除了 static 和 final 变量。</li>
+<li>接口不是被类继承了，而是要被类实现。</li>
+<li>接口支持多继承。</li>
+</ul>
+<h3 id="1-5接口与抽象类的区别"><a href="#1-5接口与抽象类的区别" class="headerlink" title="1.5接口与抽象类的区别"></a>1.5接口与抽象类的区别</h3><ul>
+<li>抽象类中的方法可以有方法体，就是能实现方法的具体功能，但是接口中的方法不行。</li>
+<li>抽象类中的成员变量可以是各种类型的，而接口中的成员变量只能是 <strong>public static final</strong> 类型的。</li>
+<li>接口中不能含有静态代码块以及静态方法(用 static 修饰的方法)，而抽象类是可以有静态代码块和静态方法。</li>
+<li>一个类只能继承一个抽象类，而一个类却可以实现多个接口。</li>
+</ul>
+<h2 id="二、接口规范"><a href="#二、接口规范" class="headerlink" title="二、接口规范"></a>二、接口规范</h2><ul>
+<li>任何类在实现接口时，必须<strong>实现接口中所有的抽象方法</strong>，否则此类为抽象类。 </li>
+<li>实现接口中的抽象方法时，<strong>访问修饰符必须是public</strong>。 </li>
+<li>同父类一样，接口也可声明为引用，并指向实现类对象。</li>
+</ul>
+<h2 id="三、微观接口"><a href="#三、微观接口" class="headerlink" title="三、微观接口"></a>三、微观接口</h2><p>3.1 概念：接口是一种能力和约定</p>
+<ul>
+<li>接口的定义：代表了某种能力</li>
+<li>方法的定义：能力的具体要求</li>
+</ul>
+<p>3.2 经验：</p>
+<ul>
+<li>Java为单继承，当父类的方法种类无法满足子类需求时，可实现接口扩张子类功能</li>
+<li>接口支持多实现，可为类扩张多种能力</li>
+</ul>
+<h2 id="四、接口实现多态"><a href="#四、接口实现多态" class="headerlink" title="四、接口实现多态"></a>四、接口实现多态</h2><blockquote>
+<p>不同的引用类型，仅可调用自身类型所定义的方法</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">		<span class="comment">//抽象类作为引用</span></span><br><span class="line">		<span class="type">Animal</span> <span class="variable">a</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();<span class="comment">//将狗当做动物看</span></span><br><span class="line">		a.eat();</span><br><span class="line">		a.sleep();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//接口作为引用   </span></span><br><span class="line">		<span class="type">Runnable</span> <span class="variable">r</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();<span class="comment">//将狗当做能跑的看</span></span><br><span class="line">		r.run();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//接口作为引用   </span></span><br><span class="line">		<span class="type">Swimmable</span> <span class="variable">s</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();<span class="comment">//将狗当做能游泳的看</span></span><br><span class="line">		s.siwm();</span><br><span class="line">		</span><br><span class="line">		<span class="type">Dog</span> <span class="variable">dog</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();<span class="comment">//将狗当做狗的看</span></span><br><span class="line">		dog.eat();</span><br><span class="line">		dog.sleep();</span><br><span class="line">		dog.run();</span><br><span class="line">		dog.siwm();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="五、接口常见关系"><a href="#五、接口常见关系" class="headerlink" title="五、接口常见关系"></a>五、接口常见关系</h2><blockquote>
+<p>类与类：</p>
+<ul>
+<li>单继承</li>
+<li>extends父类</li>
+</ul>
+<p>类与接口：</p>
+<ul>
+<li>多实现</li>
+<li>implements 接口名称1，接口名称2，接口名称3</li>
+</ul>
+<p>接口与接口：</p>
+<ul>
+<li>多继承</li>
+<li>extends 父接口1，父接口2，父接口3</li>
+</ul>
+</blockquote>
+<p>案例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Runnable</span> <span class="keyword">extends</span> <span class="title class_">Serializable</span> ,Cloneable&#123;</span><br><span class="line">	<span class="comment">//跑</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="六、常量接口"><a href="#六、常量接口" class="headerlink" title="六、常量接口"></a>六、常量接口</h2><blockquote>
+<p>将多个常用于表示状态或固定值的变量，以静态常量的形式定义在接口中统一管理，提高代码可读性。 </p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Constants</span> &#123;</span><br><span class="line">	<span class="comment">//QQ的状态    接口常量 --- &gt; 枚举类型</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">ZAI_XIAN</span> <span class="operator">=</span> <span class="number">100</span>; <span class="comment">//在线</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span>	<span class="variable">YIN_SHEN</span> <span class="operator">=</span> <span class="number">200</span>; <span class="comment">//隐身</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">LI_XIAN</span> <span class="operator">=</span> <span class="number">300</span>;  <span class="comment">//离线</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">Q_WO</span> <span class="operator">=</span> <span class="number">400</span>;     <span class="comment">//Q我</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">MANG_LU</span> <span class="operator">=</span> <span class="number">500</span>;  <span class="comment">//忙碌</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="七、宏观接口"><a href="#七、宏观接口" class="headerlink" title="七、宏观接口"></a>七、宏观接口</h2><h3 id="7-1-概念"><a href="#7-1-概念" class="headerlink" title="7.1 概念"></a>7.1 概念</h3><blockquote>
+<p>接口是一种标准、规范</p>
+</blockquote>
+<h3 id="7-2-回调原理"><a href="#7-2-回调原理" class="headerlink" title="7.2 回调原理"></a>7.2 回调原理</h3><blockquote>
+<p>接口回调：现有接口的使用者，后又接口的实现者</p>
+</blockquote>
+<p>案例：判断哥德巴赫猜想</p>
+<p>①接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//此接口的作用是判断数字是否是质数</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">MyInterface</span>&#123;</span><br><span class="line">	<span class="type">boolean</span> <span class="title function_">isZS</span><span class="params">(<span class="type">int</span> num)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>②工具</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//此方法已经调用了接口中的方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">gdbh</span><span class="params">(<span class="type">int</span> num,MyInterface mi)</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">3</span>; i &lt;= num/<span class="number">2</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(mi.isZS(i) &amp;&amp; mi.isZS(num-i)) &#123;</span><br><span class="line">            System.out.println(num+<span class="string">&quot;=&quot;</span>+i+<span class="string">&quot;+&quot;</span>+(num-i));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>③接口的实现者</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这是接口的实现者，在调用工具前，需要有接口的实现</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyInterfaceImpl</span> <span class="keyword">implements</span> <span class="title class_">MyInterface</span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isZS</span><span class="params">(<span class="type">int</span> num)</span> &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>; i &lt; num; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(num % i == <span class="number">0</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>④工具的调用者</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="comment">//使用工具</span></span><br><span class="line">    gdbl(<span class="number">14</span>, <span class="keyword">new</span> <span class="title class_">MyInterfaceImpl</span>() );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接口回调编码顺序①②③④</p>
+<h3 id="7-3-接口好处"><a href="#7-3-接口好处" class="headerlink" title="7.3 接口好处"></a>7.3 接口好处</h3><ul>
+<li>程序的耦合度降低</li>
+<li>更自然使用多态</li>
+<li>设计与实现完全分离</li>
+<li>更容易搭建程序框架</li>
+<li>更容易更换具体实现</li>
+</ul>
+<h2 id="八、内部类"><a href="#八、内部类" class="headerlink" title="八、内部类"></a>八、内部类</h2><h3 id="8-1-概念"><a href="#8-1-概念" class="headerlink" title="8.1 概念"></a>8.1 概念</h3><p>内部类概念：</p>
+<ul>
+<li>在一个类中定义的类，称之为内部类(InnerClass)，外面的类的称之为外部类(OutClass)</li>
+</ul>
+<p>内部类分类：</p>
+<ul>
+<li>成员内部类</li>
+<li>静态内部类</li>
+<li>局部内部类</li>
+<li>匿名内部类</li>
+</ul>
+<p>内部类特点：</p>
+<ul>
+<li>内部类可以访问外部类的私有成员，且不破坏封装性</li>
+<li>内部类也会生成<code>.class</code>文件。名称：<code>外部类型$$内部类型.class</code></li>
+</ul>
+<p>外部类特点：</p>
+<ul>
+<li>一个java 文件中可以编写多个类，但是只能有一个类能使用public修饰，称之为主类。主类名必须与文件名一致</li>
+<li>建议：以后开发中，一个java文件就编写一个类</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">OutClass</span> &#123;<span class="comment">//外部类</span></span><br><span class="line">	<span class="comment">//内部类</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">InnerClass</span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="8-2-成员内部类"><a href="#8-2-成员内部类" class="headerlink" title="8.2 成员内部类"></a>8.2 成员内部类</h3><p>成员内部类</p>
+<ul>
+<li>1、成员内部类中只能定义非静态属性和方法</li>
+<li>2、成员内部类中可以访问外部类的成员，私有的可以，静态的也可以</li>
+</ul>
+<p>成员内部类如何创建对象</p>
+<ul>
+<li>语法：  内部类  对象名  &#x3D;  new 外部类().new 内部类();</li>
+</ul>
+<h3 id="8-3-静态内部类"><a href="#8-3-静态内部类" class="headerlink" title="8.3 静态内部类"></a>8.3 静态内部类</h3><p>静态内部类</p>
+<ul>
+<li>1、静态内部类中可以定义属性和方法，也能定义静态属性和方法</li>
+<li>2、静态内部类中只能访问静态外部类的静态属性和方法</li>
+</ul>
+<p>静态内部类创建对象</p>
+<ul>
+<li>语法：内部类 对象名 &#x3D; new 外部类.内部类();</li>
+</ul>
+<h3 id="8-4-局部内部类"><a href="#8-4-局部内部类" class="headerlink" title="8.4 局部内部类"></a>8.4 局部内部类</h3><p>局部内部类: 定义在方法中</p>
+<p>特点：	</p>
+<ul>
+<li>1、成员内部类中只能定义非静态属性和方法</li>
+<li>2、成员内部类中可以访问外部类的成员，私有的可以，静态的也可以</li>
+<li>3、局部内部类只能在方法内创建对象</li>
+</ul>
+<p><strong>面试题</strong>：</p>
+<ul>
+<li>局部内部类<strong>只能访问局部常量</strong>。</li>
+<li>在jdk1.7版本中，如果局部变量在局部内部类中使用必须要显式的加上final</li>
+<li>在jdk1.8版本中，final是默认加上的</li>
+<li>因为局部变量在方法结束后，就会被销毁，而局部内部类的对象却要等到内存回收机制进行销毁所以如果是常量的话，那么常量就会被存放在常量池中，</li>
+</ul>
+<h3 id="8-5-匿名内部类！！！"><a href="#8-5-匿名内部类！！！" class="headerlink" title="8.5 匿名内部类！！！"></a>8.5 匿名内部类！！！</h3><p>匿名内部类: 本身就是一个对象</p>
+<p>语法:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> 父类()&#123;</span><br><span class="line">    重写父类的方法</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>特点:</p>
+<ol>
+<li>匿名内部类本身就是一个对象</li>
+<li>一般在匿名内部类中不会定义属性和方法，因为没有意义</li>
+<li>匿名内部类的父类一般都是抽象类或者是接口</li>
+</ol>
+<p>匿名内部类的应用场景</p>
+<ul>
+<li>如果一个方法的参数是接口，且这个接口只需要实现一次,那么就可以使用匿名内部类</li>
+<li>这个接口的实现每一次都不相同，就可以使用匿名内部类</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Father</span> <span class="variable">f</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Father</span>() &#123;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">m1</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;m1()...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>案例：判断哥德巴赫猜想</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//使用匿名内部类作为参数传递</span></span><br><span class="line">		gdbh(<span class="number">14</span>,<span class="keyword">new</span> <span class="title class_">MyInterface</span>() &#123;</span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isZS</span><span class="params">(<span class="type">int</span> num)</span> &#123;</span><br><span class="line">				<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>; i &lt; num; i++) &#123;</span><br><span class="line">					<span class="keyword">if</span>(num % i == <span class="number">0</span>) &#123;</span><br><span class="line">						<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">gdbh</span><span class="params">(<span class="type">int</span> num,MyInterface mi)</span> &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">3</span>; i &lt;= num/<span class="number">2</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(mi.isZS(i) &amp;&amp; mi.isZS(num-i)) &#123;</span><br><span class="line">				System.out.println(num+<span class="string">&quot;=&quot;</span>+i+<span class="string">&quot;+&quot;</span>+(num-i));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">MyInterface</span>&#123;</span><br><span class="line">	<span class="type">boolean</span> <span class="title function_">isZS</span><span class="params">(<span class="type">int</span> num)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
                 
             </div>
@@ -439,8 +580,8 @@ Math.random() 这个方法是用来生成一个 0 ~ 1 之间的随机数
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JavaScript/">
-                                    <span class="chip bg-color">JavaScript</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
                                 </a>
                             
                         </div>
@@ -490,13 +631,13 @@ Math.random() 这个方法是用来生成一个 0 ~ 1 之间的随机数
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/03/09/JS_BOM/">
+                <a href="/2024/04/03/Java-%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="JS_BOM">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Java_常用工具类">
                         
-                        <span class="card-title">JS_BOM</span>
+                        <span class="card-title">Java_常用工具类</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -507,7 +648,7 @@ Math.random() 这个方法是用来生成一个 0 ~ 1 之间的随机数
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-09
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-03
                         </span>
                         <span class="publish-author">
                             
@@ -520,8 +661,8 @@ Math.random() 这个方法是用来生成一个 0 ~ 1 之间的随机数
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
@@ -535,13 +676,13 @@ Math.random() 这个方法是用来生成一个 0 ~ 1 之间的随机数
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/03/08/JS_%E5%B8%B8%E7%94%A8%E5%AF%B9%E8%B1%A1_Date/">
+                <a href="/2024/04/01/Java-%E4%B8%89%E4%B8%AA%E4%BF%AE%E9%A5%B0%E7%AC%A6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="JS_常用对象_Date">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Java_三个修饰符">
                         
-                        <span class="card-title">JS_常用对象_Date</span>
+                        <span class="card-title">Java_三个修饰符</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -552,7 +693,7 @@ Math.random() 这个方法是用来生成一个 0 ~ 1 之间的随机数
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-01
                             </span>
                         <span class="publish-author">
                             
@@ -565,8 +706,8 @@ Math.random() 这个方法是用来生成一个 0 ~ 1 之间的随机数
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
